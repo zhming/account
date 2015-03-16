@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:service.properties" />
+	</bean>
+
+
+
+	<bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="javaMailProperties">
+        <props>
+            <prop key="mail.debug">false</prop>
+            <prop key="mail.transport.protocol">smtp</prop>
+            <prop key="mail.smtp.port">3025</prop>
+            <prop key="mail.smtp.auth">true</prop>
+            <prop key="mail.smtp.user">test@mail.extern</prop>
+            <prop key="mail.smtp.host">localhost</prop>
+            <prop key="mail.smtp.from">test@mail.extern</prop>
+        </props>
+    </property>
+    <property name="username" value="test"/>
+    <property name="password" value="123"/>
+    <property name="defaultEncoding" value="utf8" />
+	</bean>
+	
+	<bean id="accountEmailService" class="com.juvenxu.mvnbook.account.account.email.impl.AccountEmailServiceImpl">
+		<property name="systemEmail" value="${email.systemEmail}" />
+		<property name="javaMailSender" ref="javaMailSender"></property>
+	</bean>
+</beans>
