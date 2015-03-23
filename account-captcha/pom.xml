@@ -6,6 +6,7 @@
 		<groupId>com.juvenxu.mvnbook.account</groupId>
 		<artifactId>account-parent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../account-aggregator/account-parent/pom.xml</relativePath>
 	</parent>
 
 	<artifactId>account-captcha</artifactId>

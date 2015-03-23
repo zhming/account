@@ -1,4 +1,4 @@
-package com.juvenxu.mvnbook.account.account.captcha;
+package com.juvenxu.mvnbook.account.captcha;
 
 public class AccountCaptchaException extends Exception
 {

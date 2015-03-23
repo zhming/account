@@ -14,9 +14,9 @@ import org.springframework.beans.factory.InitializingBean;
 
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import com.google.code.kaptcha.util.Config;
-import com.juvenxu.mvnbook.account.account.captcha.AccountCaptchaException;
-import com.juvenxu.mvnbook.account.account.captcha.AccountCaptchaService;
-import com.juvenxu.mvnbook.account.account.captcha.RandomGenerator;
+import com.juvenxu.mvnbook.account.captcha.AccountCaptchaException;
+import com.juvenxu.mvnbook.account.captcha.AccountCaptchaService;
+import com.juvenxu.mvnbook.account.captcha.RandomGenerator;
 
 public class AccountCaptchaServiceImpl implements AccountCaptchaService,
 		InitializingBean

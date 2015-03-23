@@ -1,9 +1,12 @@
-package com.juvenxu.mvnbook.account.account.captcha;
+package com.juvenxu.mvnbook.account.captcha;
 
 import java.util.HashSet;
 import java.util.Set;
 
 import org.junit.Test;
+
+import com.juvenxu.mvnbook.account.captcha.RandomGenerator;
+
 import static org.junit.Assert.assertFalse;
 
 public class RandomGeneratorTest
