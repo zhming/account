@@ -1,4 +1,4 @@
-package com.juvenxu.mvnbook.account.account.captcha.impl;
+package com.juvenxu.mvnbook.account.captcha.impl;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
@@ -71,7 +71,7 @@ public class AccountCaptchaServiceImpl implements AccountCaptchaService,
 			throws AccountCaptchaException
 	{
 		String text = captchaMap.get(captchaKey);
-		if (text != null)
+		if (text == null)
 		{
 			throw new AccountCaptchaException("CaptchKey'" + captchaKey + "'not found!");
 		}
@@ -91,7 +91,7 @@ public class AccountCaptchaServiceImpl implements AccountCaptchaService,
 
 	}
 
-	public void setPerDefinedTexts(List<String> perDefinedTexts)
+	public void setPerDefinedTexts(List<String> preDefinedTexts)
 	{
 		this.preDefinedTexts = preDefinedTexts;
 	}

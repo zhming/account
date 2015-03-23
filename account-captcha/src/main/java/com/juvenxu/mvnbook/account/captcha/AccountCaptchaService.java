@@ -8,5 +8,5 @@ public interface AccountCaptchaService
 	byte[] generateCaptchaImage(String captchaKey) throws AccountCaptchaException;
 	boolean validateCaptcha(String captchaKey, String captchaValue) throws AccountCaptchaException;
 	List<String> getPerDefinedTexts();
-	void setPerDefinedTexts(List<String> perDefinedTexts);
+	void setPerDefinedTexts(List<String> preDefinedTexts);
 }
